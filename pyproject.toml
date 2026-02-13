@@ -56,8 +56,8 @@ dev = [
 ftdata = "ftdata.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/snambiar/ftdata"
-Repository = "https://github.com/snambiar/ftdata"
+Homepage = "https://github.com/sidscorp/ftdata"
+Repository = "https://github.com/sidscorp/ftdata"
 
 [tool.setuptools.packages.find]
 where = ["src"]
