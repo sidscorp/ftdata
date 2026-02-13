@@ -1,0 +1,6 @@
+{"messages": [{"role": "user", "content": "What is Python?"}, {"role": "assistant", "content": "Python is a high-level, interpreted programming language known for its simplicity and readability."}]}
+{"messages": [{"role": "user", "content": "What is Python?"}, {"role": "assistant", "content": "Python is a high-level, interpreted programming language known for its simplicity and readability."}]}
+{"messages": [{"role": "user", "content": "What is Python?"}, {"role": "assistant", "content": "Python is a popular high-level programming language known for its simple and readable syntax."}]}
+{"messages": [{"role": "user", "content": "Explain recursion."}, {"role": "assistant", "content": "Recursion is when a function calls itself to solve a problem by breaking it down into smaller subproblems."}]}
+{"messages": [{"role": "user", "content": "Explain recursion."}, {"role": "assistant", "content": "Recursion is when a function calls itself to solve a problem by breaking it down into smaller subproblems."}]}
+{"messages": [{"role": "user", "content": "What are Python decorators?"}, {"role": "assistant", "content": "Decorators are a way to modify or enhance functions without changing their code, using the @decorator syntax."}]}

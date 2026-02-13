@@ -1,0 +1,5 @@
+{"instruction": "Summarize the following text.", "input": "Machine learning is a subset of artificial intelligence that focuses on building systems that learn from data. These systems improve their performance over time without being explicitly programmed.", "output": "Machine learning is an AI subset where systems learn and improve from data without explicit programming."}
+{"instruction": "Translate the following English sentence to French.", "input": "The weather is beautiful today.", "output": "Le temps est magnifique aujourd'hui."}
+{"instruction": "Write a haiku about programming.", "input": "", "output": "Code flows like water\nBugs hide in the smallest lines\nTests bring peace of mind"}
+{"instruction": "Classify the sentiment of this review.", "input": "This product exceeded my expectations! The quality is outstanding and the delivery was fast.", "output": "Positive. The review expresses satisfaction with both product quality and delivery speed."}
+{"instruction": "Generate a creative name for a coffee shop.", "input": "", "output": "The Midnight Brew — a cozy coffee shop with a night-owl theme, serving specialty lattes and pastries until 2 AM."}

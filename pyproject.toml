@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ftdata"
+version = "0.1.0"
+description = "Profile and validate LLM fine-tuning datasets"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Sidd Nambiar" }]
+keywords = ["llm", "fine-tuning", "dataset", "profiling", "validation", "dedup"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "tiktoken>=0.5",
+    "datasketch>=1.6",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+semantic = [
+    "sentence-transformers>=2.2",
+    "torch>=2.0",
+    "numpy>=1.24",
+    "hdbscan>=0.8",
+]
+llm = [
+    "anthropic>=0.40",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "pre-commit>=3.0",
+    "types-PyYAML>=6.0",
+]
+
+[project.scripts]
+ftdata = "ftdata.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/snambiar/ftdata"
+Repository = "https://github.com/snambiar/ftdata"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ftdata"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = [
+    "datasketch",
+    "tiktoken",
+    "sentence_transformers",
+    "hdbscan",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "e2e: End-to-end tests",
+    "semantic: Tests requiring sentence-transformers",
+]
+addopts = "-ra -q"

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ftdata Report — {{ report.dataset_path }}</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
+        table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+        th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+        th { background: #f5f5f5; }
+        .metric { font-size: 1.5rem; font-weight: bold; }
+        .section { margin: 2rem 0; }
+    </style>
+</head>
+<body>
+    <h1>ftdata Report</h1>
+    <p>Dataset: <code>{{ report.dataset_path }}</code></p>
+    <p>Format: {{ report.dataset_format }}</p>
+    <p>Samples: {{ report.sample_count }}</p>
+
+    <!-- TODO: Implement full report template -->
+</body>
+</html>
